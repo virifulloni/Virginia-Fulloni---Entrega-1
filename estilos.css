@@ -1,0 +1,707 @@
+@font-face {
+    font-family: "ClanPro-News";
+    src: url("fonts/ClanPro-News.otf");
+  }
+
+@font-face {
+    font-family: "Moon2.0-Bold";
+    src: url("fonts/Moon2.0-Bold.otf");
+  }
+
+@font-face {
+    font-family: "Georgia";
+    src: url("fonts/Georgia.ttf");
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+
+#contenedor-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 1fr 200px;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";}
+    
+header{
+    width: 100%;
+    height: 120px;
+    grid-area: header;
+    background-color: white;
+    position: fixed;
+    z-index: 200;
+}
+
+
+
+/* ...........MENU CELULAR........... */
+
+.nav-cel{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    visibility: hidden;
+}
+
+.logo2 img{
+    width: 200px;
+    
+}
+
+#menu {
+    position: absolute;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #ecaca2;
+    visibility: hidden;
+    
+}
+
+#menu ul {
+    list-style: none;
+    display: grid;
+    gap: 5px;
+    height: 100%;
+    align-content: start;
+}
+
+#menu ul li {
+    border-bottom: 1px solid whitesmoke;
+    padding: 15px;
+    text-align: center;
+}
+
+#menu ul li a{
+    font-family: 'ClanPro-News', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    background: url("img/menu-cel.png");
+    background-position: center;
+    background-size: cover;
+    
+    top: 20px;
+    left: 60%;
+    border: none;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+   
+}
+
+.button:hover {
+    background: url("img/menu-cel-b.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* ...........TERMINA MENU CELULAR........... */
+
+nav{
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a{
+    font-family: 'ClanPro-News', sans-serif;
+    font-size: 20px;
+    color: #524033;
+    text-decoration: none;
+}
+
+nav ul li{
+    font-family: 'ClanPro-News', sans-serif;
+    font-size: 20px;
+    color: #ecaca2;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #ecaca2;
+}
+
+.logo img{
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.6fr 1.3fr 0.7fr;
+    grid-template-areas: "portada"
+                         "section1"
+                         "section2"
+                         "section3";
+}
+
+.portada{
+    grid-area: portada;
+    width: 100%;
+    height: 400px;
+    background: url("img/portada.png");
+    background-position: center;
+    background-size: cover;
+}
+
+
+.contenido-1{
+    grid-area: section1;
+    background-color: white;
+    position: relative;
+}
+
+.fondo-verde{
+    display: grid; 
+    min-height: 475px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "columna1 columna2";
+    background-color: #c7d2c1;
+    position: absolute;
+    bottom: 10%;
+}
+
+.foto-nosotras{
+    position: absolute;
+    z-index: 100;
+    right: 15%; 
+    top: 5%;
+    width: 30%;
+}
+
+
+#info{
+    grid-area: columna1;
+    width: 70%;
+    margin-left: 8%;
+}
+
+#info h2{
+    font-family: 'Moon2.0-Bold';
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 10%;
+
+}
+
+#info p{
+    font-family: 'Georgia';
+    font-style: italic;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#info a{
+    width: 130px;
+    font-family: 'Moon2.0-Bold';
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-align: center;
+    color: white;   
+    margin-left: 20px;
+    margin-top: 40px;
+    display: block;
+    background-color: #ecaca2;
+    padding: 5px;
+}
+
+@keyframes vermas {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#info a:hover{
+    animation-name: vermas;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    cursor: pointer;
+    background-color:#4c665b
+}
+
+#contenido-1-fondo{
+    grid-area: columna2;
+    background: url("img/contenido-1-fondo.png");
+    background-size: cover;
+}
+
+#contenido-1-fondo img{
+    width: 100%;
+    display: block;
+}
+
+.contenido-2{
+    grid: section2;
+}
+
+.contenido-2 h3{
+    font-family: 'Moon2.0-Bold';
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#contenedor-tarjetas{
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tarjeta-destacados{
+    width: 25%;
+    margin: 20px;
+}
+
+.img-tarjeta img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.body-tarjeta{
+    height: 75px;
+    background-color: #c7d2c1;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.body-tarjeta:hover{
+    background-color: #ecaca2;
+}
+
+.body-tarjeta:hover a{
+    color: white;
+}
+
+.body-tarjeta a{
+    text-decoration: none;
+    font-family: 'Georgia';
+    font-style: italic;
+    color: black;
+    font-size: 22px;
+}
+
+.body-tarjeta a:hover{
+    color: white;
+}
+
+.contenido-3{
+    grid-area: section3;
+    border-top: 3px solid black;
+}
+
+.contenido-3 h3{
+    font-family: 'Moon2.0-Bold';
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contenido-3 h3 a{
+    max-width: 80%;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-top: 20px;
+    animation-name: vermas;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.contenido-3 h3 a:hover{
+    color: #ecaca2;
+}
+
+
+
+.contenedor-img-instagram ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+   
+}
+
+
+.img-instagram img{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    display: block;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #4c665b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info-footer{
+    width: 70%;
+    margin: auto;
+}
+
+.logo-footer img{
+    width: 20%;
+    margin: auto;
+    display: block;
+}
+
+.derechos{
+    width: 70%;
+    height: 10%;
+    margin: auto;
+    border-bottom: 2px solid white;
+}
+
+.derechos p{
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    padding: 15px;
+}
+
+.redes ul{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.redes ul li a{
+    height: 34px;
+    width: 34px;
+    background-size: cover;
+    display: block;
+    margin: auto;
+}
+
+.instagram a{
+    background-image: url("img/pie-icon1.png");   
+}
+
+.instagram a:hover{
+    background-image: url("img/pie-icon1-b.png");   
+}
+
+.facebook a{
+    background-image: url("img/pie-icon2.png");
+}
+
+.facebook a:hover{
+    background-image: url("img/pie-icon2-b.png");
+}
+
+.mail a{
+    background-image: url("img/pie-icon3.png");
+}
+
+.mail a:hover{
+    background-image: url("img/pie-icon3-b.png");
+}
+
+
+/* ...........SHOP.HTML........... */
+
+#shop{
+    grid-area: main;
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 0.9fr 2fr;
+    grid-template-areas: "portada"
+                         "section1-shop"
+                         "section2-shop";
+}
+
+.portada-shop{
+    grid-area: portada;
+    width: 100%;
+    height: 400px;
+    background: url("img/portada-shop.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.contenido-1-shop{
+    grid-area: section1-shop;
+}
+
+#contenedor-menu-shop{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-shop {
+    width: 30%;
+    text-align: center;}
+
+.menu-shop img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.menu-shop a{
+    font-family: 'Moon2.0-Bold';
+    letter-spacing: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    margin-top: 30px;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.menu-shop a:hover{
+    color: #ecaca2;
+}
+
+.contenido-2-shop{
+    grid-area: section2-shop;
+    background-color: #ece9e9;
+
+}
+
+.titulo-shop{
+    width: 100%;
+    height: 90px;
+    background-color: #c7d2c1;
+}
+
+.titulo-shop h4{
+    font-family: 'Moon2.0-Bold';
+    letter-spacing: 10px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 90px;
+    color: white;
+}
+
+.contenedor-tarjetas-shop{
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.tarjeta-shop{
+    width: 28%;
+    margin: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.img-tarjeta-shop img{
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+
+}
+
+.body-tarjeta-shop{
+    height: 90px;
+}
+
+.body-tarjeta-shop h5{
+    font-family: 'Georgia';
+    font-style: italic;
+    color: black;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.body-tarjeta-shop p{
+    font-family: sans-serif;
+    color: black;
+    font-size: 14px;
+    padding: 4px;
+}
+
+.body-tarjeta-shop a{
+    font-family: 'Moon2.0-Bold';
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: white;   
+    background-color: #ecaca2;
+    display: block;
+    margin: auto;
+    padding: 4px;
+    margin-top: 5px;
+}
+
+.body-tarjeta-shop a:hover{
+    animation-name: vermas;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    cursor: pointer;
+    background-color:#4c665b
+}
+
+
+
+@media (max-width: 650px) {
+    main{
+        grid-area: main;
+        display: grid;
+        gap: 70px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.9fr 0.2fr 2fr 0.4fr;
+        grid-template-areas: "portada"
+                             "section1"
+                             "section2"
+                             "section3";
+    }
+
+    #nav-pc{
+        display: none;
+    }
+
+    .nav-cel{
+        visibility: visible;
+    }
+
+    .portada{
+        height: 500px;
+        background: url("img/portada-cel.jpg");
+        background-position: center;
+        background-size: cover;}
+
+    .foto-nosotras{
+        display: none;
+    }
+
+    .fondo-verde{
+        min-height: 375px;
+    }
+
+    #info p{
+        font-size: 15px;
+    }
+
+    #contenedor-tarjetas{
+        flex-direction: column;
+    }
+
+    .tarjeta-destacados{
+        width: 100%;
+        margin: 35px;
+    }
+
+    .img-instagram img{
+        width: 90px;
+        height: 90px;
+    }
+
+    #ocultar{
+        display: none;
+    }
+
+    .logo-footer img{
+        width: 40%;
+        padding-top: 20px;
+    }
+
+    .derechos{
+        width: 100%;
+    }
+
+    .derechos p{
+        font-size: 14px;
+    }
+
+
+    #shop{
+        grid-area: main;
+        display: grid;
+        gap: 80px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.6fr 2fr;
+        grid-template-areas: "portada"
+                             "section1-shop"
+                             "section2-shop";
+    }
+
+
+    #contenedor-menu-shop{
+        flex-direction: column;
+    }
+
+    .menu-shop{
+        width: 100%;
+    }
+
+    .contenedor-tarjetas-shop{
+        flex-direction: column;
+    }
+
+    .tarjeta-shop{
+        width: 100%;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+   
+
+    
+
+}

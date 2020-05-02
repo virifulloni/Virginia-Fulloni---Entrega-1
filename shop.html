@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css" TYPE="text/css" MEDIA=screen> 
+    <title>shop</title>
+</head>
+<body>
+<div id="contenedor-grid">
+    <header>
+        <nav id="nav-pc">
+            <ul>
+                <li><a href="inicio.html">INICIO</a></li>
+                <li>SHOP</li>
+                <li class="logo"><img src="img/logo.png"></li>
+                <li><a href="">INFO</a></li>
+                <li><a href="">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-cel">
+            <div class="logo2"><img src="img/logo.png"></div>
+            <button id="menuButton" class="button"></button>
+        </div>
+        
+        <nav id="menu">
+                <ul>
+                <li><a href="inicio.html">INICIO</a></li>
+                <li><a href="">SHOP</a></li>
+                <li><a href="">INFO</a></li>
+                <li><a href="">CONTACTO</a></li>
+                </ul>
+        </nav>
+
+        <script>
+            const menu = document.getElementById('menu');
+
+            document.getElementById('menuButton').addEventListener('click', function() {
+    
+                if(menu.style.visibility == 'hidden' || menu.style.visibility == ''){
+                    menu.style.visibility = "visible";
+                }else{
+                    menu.style.visibility = "hidden";
+                }
+
+            });
+            
+        </script>
+    
+
+    </header>
+
+    <main id="shop">
+
+        <div class="portada-shop"></div>
+        
+        <section class="contenido-1-shop">
+
+            <div id="contenedor-menu-shop">
+
+                <div class="menu-shop">
+                    <img src="img/menu-shop-1.png">
+                        <a href="">BIKINIS</a>
+                </div>
+
+                <div class="menu-shop">
+                    <img src="img/menu-shop-2.png">
+                        <a href="">ENTERAS</a>
+                </div>
+
+                <div class="menu-shop">
+                    <img src="img/menu-shop-3.png">
+                        <a href="">SALE</a>
+                </div>
+
+            </div>
+
+            
+        </section>
+
+        <section class="contenido-2-shop">
+
+            <div class="titulo-shop">
+                <h4>BIKINIS</h4>
+            </div>
+
+            <div class="contenedor-tarjetas-shop">
+
+                <div class="tarjeta-shop">
+                    <div class="img-tarjeta-shop"><img src="img/modelos-1.png"></div>
+                    <div class="body-tarjeta-shop">
+                        <h5>NIA</h5>
+                        <p>Top / Colaless</p>
+                        <a href="">SHOP NOW</a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-shop">
+                    <div class="img-tarjeta-shop"><img src="img/modelos-2.png"></div>
+                    <div class="body-tarjeta-shop">
+                        <h5>CAIRO WHITE</h5>
+                        <p>Colaless ajustable</p>
+                        <a href="">SHOP NOW</a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-shop">
+                    <div class="img-tarjeta-shop"><img src="img/modelos-3.png"></div>
+                    <div class="body-tarjeta-shop">
+                        <h5>SUMBAWA</h5>
+                        <p>Colaless ajustable</p>
+                        <a href="">SHOP NOW</a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-shop">
+                    <div class="img-tarjeta-shop"><img src="img/modelos-4.png"></div>
+                    <div class="body-tarjeta-shop">
+                        <h5>MOON RED</h5>
+                        <p>Colaless ajustable</p>
+                        <a href="">SHOP NOW</a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-shop">
+                    <div class="img-tarjeta-shop"><img src="img/modelos-5.png"></div>
+                    <div class="body-tarjeta-shop">
+                        <h5>ACUARIO NEON</h5>
+                        <p>Top / Semivedetina</p>
+                        <a href="">SHOP NOW</a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-shop">
+                    <div class="img-tarjeta-shop"><img src="img/modelos-6.png"></div>
+                    <div class="body-tarjeta-shop">
+                        <h5>ORANGE</h5>
+                        <p>Colaless ajustable</p>
+                        <a href="">SHOP NOW</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+                
+           
+                
+        </section>
+
+        
+
+    </main>
+    
+    <footer>
+        <div class="info-footer">
+            <div class="logo-footer"><img src="img/pie-logo.png"></div>
+            <div class="derechos"><p>©Copyright 2020 Moraine. All Rights Reserved. - Virginia Fulloni</p></div>
+            <div class="redes">
+                <ul>
+                    <li class="instagram"><a href="https://www.instagram.com/morainebikinis/" target="_blank"></a></li>
+                    <li class="facebook"><a href="https://www.facebook.com/morainebikinis/" target="_blank"></a></li>
+                    <li class="mail"><a href=""></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+</div>
+</body>
+</html>
